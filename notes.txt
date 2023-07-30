@@ -1,0 +1,88 @@
+# Creating virtual Environment in  Python
+
+# step1: 
+#     navigate to project folder
+
+#     cd "D:\F drive\learning\Besant_tech\Besant_Project_1\Besant_blog_proj\Besant_blog"
+
+# step2:
+
+#     python -m venv your_env_name
+
+# step3: 
+#      cd "your_env_name/scripts"
+
+#     type:
+#         activate --> activating environment
+#         deactivate --> deactivating environment
+
+requirements.txt
+-----------------
+
+Django
+pandas 
+numpy 
+seaborn
+matplotlib
+fastapi
+uvicorn[standard]
+
+pip install -r requirements.txt  --> all the packages will be installed in the environment
+
+API
+----
+
+fastapi link - https://fastapi.tiangolo.com/tutorial/
+
+pip install fastapi
+pip install "uvicorn[standard]"
+
+
+click on First Steps:
+--------------------
+
+my_api.py
+---------
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
+start the API 
+-----------------
+
+enter this in CMD prompt
+------------------------
+
+uvicorn my_api:app --reload
+
+Django
+------
+
+Creating an django project
+-------------------------
+
+django-admin startproject Besant_blog
+
+move inside project folder
+-------------------------
+
+cd Besant_blog
+
+Creating an application
+----------------------
+
+python manage.py startapp besantblogapp
+
+
+starting the application
+------------------------
+
+python manage.py runserver
+
