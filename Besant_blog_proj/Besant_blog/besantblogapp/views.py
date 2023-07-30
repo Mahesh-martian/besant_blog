@@ -23,16 +23,16 @@ def Register(request):
         messages.error(request=request, message="User already exists")
         return redirect('register')
 
-    if len(Ph_no) != 10:
-        messages.error(request=request,
-                       message="Please enter 10 digit mobile number !")
-        return redirect('register')
-
     if pwd != repwd:
         messages.error(request=request, message="Password Does not Match !")
         return redirect('register')
 
     if request.method == "POST":
+
+        if len(Ph_No) != 10:
+            messages.error(request=request,
+                           message="Please enter 10 digit mobile number !")
+            return redirect('register')
 
         user = User.objects.create_user(
             username=uname, email=email, password=pwd)
