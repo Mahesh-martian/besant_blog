@@ -23,6 +23,11 @@ def Register(request):
         messages.error(request=request, message="User already exists")
         return redirect('register')
 
+    if len(Ph_no) != 10:
+        messages.error(request=request,
+                       message="Please enter 10 digit mobile number !")
+        return redirect('register')
+
     if pwd != repwd:
         messages.error(request=request, message="Password Does not Match !")
         return redirect('register')
@@ -63,6 +68,7 @@ def Signin(request):
 def coverpage(request):
 
     return render(request=request, template_name="coverpage.html")
+
 
 def Log_out(request):
     logout(request=request)
