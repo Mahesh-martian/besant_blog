@@ -65,7 +65,7 @@ uvicorn my_api:app --reload
 Django
 ------
 
-Creating an django project
+Creating new django project
 -------------------------
 
 django-admin startproject Besant_blog
@@ -81,8 +81,34 @@ Creating an application
 python manage.py startapp besantblogapp
 
 
+create tables --> ex: auth
+--------------------
+        python manage.py makemigrations
+
+        python manage.py migrate
+
+
 starting the application
 ------------------------
 
 python manage.py runserver
 
+
+
+
+Github
+-------
+
+echo "# besant_blog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Mahesh-martian/besant_blog.git
+git push -u origin main
+
+
+
+git remote add origin https://github.com/Mahesh-martian/besant_blog.git
+git branch -M main
+git push -u origin main

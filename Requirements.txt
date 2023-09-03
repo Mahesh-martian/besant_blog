@@ -1,3 +1,7 @@
-Django
-fastapi
-uvicorn[standard]
+django
+flask
+requests
+pytest
+numpy
+pandas
+seaborn
